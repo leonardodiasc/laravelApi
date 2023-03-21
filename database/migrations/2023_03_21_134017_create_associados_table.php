@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('associados', function (Blueprint $table) {
             $table->id();
+            $table->string('nome', length: 50);
+            $table->string('sobrenomes', length: 100);
+            $table->date('dataFiliacao');
+            $table->string('cpf', length: 11)->unique();
             $table->timestamps();
         });
     }

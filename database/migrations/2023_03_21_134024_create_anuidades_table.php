@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('anuidades', function (Blueprint $table) {
             $table->id();
+            $table->string('ano', length: 4);
+            $table->string('valor', length: 30);
             $table->timestamps();
         });
     }
